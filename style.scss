@@ -1,0 +1,46 @@
+table[data-delete-mode] tbody tr:hover {
+  color: red;
+  border: 2px solid red;
+  cursor: pointer;
+}
+
+dialog[data-type="blocked_deleting_table_modal__plugin"] {
+  position: absolute;
+  top: 50;
+  left: 50;
+  transform: translate(-50% -50%);
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &::backdrop {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.4);
+  }
+}
+
+table[data-type="users-table"] th {
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+  transition: font-size .35s ease-in;
+
+  &:hover {
+    color: blue;
+    font-size: 1.25rem;
+  }
+}
+
+form[name="addUserTableForm__plugin"] fieldset > label {
+  display: grid;
+  grid-template-columns: minmax(12rem, auto) 1fr .75fr;
+
+  label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
